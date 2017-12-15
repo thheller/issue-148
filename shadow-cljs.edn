@@ -1,0 +1,10 @@
+{:source-paths ["src"]
+
+ :dependencies [[reagent "0.8.0-alpha2"]]
+
+ :builds {:app {:target :browser
+                :output-dir "public/js"
+                :asset-path "js"
+                :modules {:main {:entries [shadow.core]}}
+                :devtools {:before-load shadow.core/stop
+                           :after-load shadow.core/start}}}}
